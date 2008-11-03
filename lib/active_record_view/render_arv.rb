@@ -14,7 +14,8 @@ module ActiveRecordView
       path, arv_name = partial_pieces(arv.to_s)
       root  = Pathname(RAILS_ROOT).cleanpath.to_s + "/"
       file  = "app/views/%s/%s.arv" % [path, arv_name]
-      rhtml = arv_erb_code(File.read(root + file), arv_name, options)
+      records = options.delete(:records) || arv_name
+      rhtml = arv_erb_code(File.read(root + file), records, options)
       ActiveRecord::Base.logger.debug "Rendering %s" % file.inspect
       render :inline=>rhtml
     end
