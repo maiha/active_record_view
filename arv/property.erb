@@ -1,0 +1,19 @@
+names:
+  :class    : "<%= klass.name %>"
+
+<%- maxlength = klass.columns.map{|column| column.name.length}.max -%>
+column_names:
+<%- for column in klass.columns -%>
+  <%= %Q|%-#{maxlength}s : "%s"| % [column.name, column.human_name] %>
+<%- end -%>
+
+<%- for column in klass.columns %>
+property_<%= column.name %>:
+<%- begin -%>
+<%= arv_file("properties/#{column.type}") -%>
+<%- rescue -%>
+<%= arv_file("properties/default") -%>
+<%- end -%>
+
+<%- end -%>
+

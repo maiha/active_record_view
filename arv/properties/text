@@ -1,0 +1,7 @@
+  :options :
+    :rows   : 5
+    :cols   : 60
+#  :column_type : :string
+  :ipe_options :
+    :rows   : 3
+    :cols   : 30

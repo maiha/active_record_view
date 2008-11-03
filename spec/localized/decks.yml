@@ -1,0 +1,39 @@
+names:
+  :class    : "Deck"
+
+column_names:
+  id   : "Id"
+  name : "Name"
+  kind : "Kind"
+  word : "Word"
+
+
+property_id:
+#  :format  : "%s points"
+  :options :
+    :size   : 10
+  :masters :
+#    - 1  : "item1"
+#    - 2  : "item2"
+
+
+property_name:
+  :options :
+    :size   : 30
+  :masters :
+#  :format  : "%s"
+
+property_kind:
+  :options :
+    :size   : 60
+  :masters :
+#  :format  : "%s"
+
+property_word:
+  :options :
+    :rows   : 5
+    :cols   : 80
+  :column_type : :text
+  :masters :
+#  :format  : "%s"
+

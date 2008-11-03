@@ -1,0 +1,25 @@
+ActiveRecordView
+================
+
+# use :arv in controllers
+class ApplicationController < ActionController::Base
+  include ActiveRecordView::Controller
+end
+
+# use :arv in views
+module ApplicationHelper
+  include ActiveRecordView::Helper
+end
+
+
+Requirements
+============
+
+http://github.com/maiha/named_options
+
+
+Author
+======
+maiha@wota.jp
+
+

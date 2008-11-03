@@ -1,0 +1,4 @@
+  :options :
+    :size   : 60
+  :masters :
+#  :format  : "%s"
